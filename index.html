@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+
+<script>
+  function submitForm(){
+    let Name=document.getElementById("name").value;
+    let Email=document.getElementById("email").value;
+    let Message=document.getElementById("message").value;
+    let Result=true;
+
+    if(Name===""){
+        document.getElementById("alertName").innerHTML="* Kindly Fill Your Name";
+        Result=false;
+    }
+    else{
+        document.getElementById("alertName").innerHTML="";
+    }
+    if(Email===""){
+        document.getElementById("alertEmail").innerHTML="* Kindly Fill Your Email";
+        Result=false;
+    }
+    else{
+        document.getElementById("alertEmail").innerHTML="";
+    }
+    if(Message===""){
+        document.getElementById("alertMsg").innerHTML="* Kindly Fill Your Msg";
+        Result=false;
+    }
+    else{
+        document.getElementById("alertMsg").innerHTML="";
+    }
+      console.log("Name:", Name);
+      console.log("Email:", Email);
+      console.log("Message:", Message);
+    return false;
+  }
+</script>
+
+<section id="contactpage">
+<div id="container">     
+<div class="row align-items-center" id="mainContainer">
+    
+<div class="col-12 col-md-6 imgSection">
+   <img src="loginImg.png">
+</div>
+
+<div class="col-12 col-md-6 formSection"> 
+    <form  onsubmit="return submitForm()">
+    <h1>LOGIN HERE</h1>
+    <div>
+    <input type="text" id="name" placeholder="Your Name">
+    </div>
+    <span id="alertName"></span>
+    <div>
+    <input type="email" id="email" placeholder="Mail ID"></div>
+    <span id="alertEmail"></span>
+    <div>
+    <textarea id="message" placeholder="Your Message"></textarea></div>
+    <span id="alertMsg"></span>
+
+    <div><button type="submit">Submit</button></div> 
+    </form>
+</div>
+</div> 
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
+</body>
+</html>
